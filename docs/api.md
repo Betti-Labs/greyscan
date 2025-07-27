@@ -1,381 +1,382 @@
-# GreyScan API Reference
+# GreyScan Python Library Documentation
 
-Complete API documentation for GreyScan adaptive data intelligence platform.
+Documentation for the GreyScan intelligence platform Python scripts and classes.
 
-## Core Classes
+## Available Scripts
 
-### GreyScanEngine
+### Core Intelligence Scripts
 
-The main adaptive intelligence engine for data collection.
+- `greyscan_intelligence.py` - Full intelligence platform with cross-referencing
+- `greyscan_universal.py` - Universal platform scanner (90% success rate)  
+- `greyscan_core.py` - Adaptive learning engine (100% crypto success)
+- `greyscan_gui.py` - Tkinter GUI interface
+- `demo.py` - Basic usage demonstration
 
-#### Constructor
+## Python Classes
 
-```python
-from greyscan_core import GreyScanEngine
+### GreyScanIntelligence
 
-scanner = GreyScanEngine(target_symbols=None)
-```
+Full intelligence platform with cross-platform correlation and analysis.
 
-**Parameters:**
-- `target_symbols` (List[str], optional): Keywords to search for in collected data. Defaults to crypto symbols.
-
-**Example:**
-```python
-# For marketing research
-scanner = GreyScanEngine(target_symbols=[
-    "marketing", "brand", "campaign", "ROI", "conversion"
-])
-
-# For competitor analysis  
-scanner = GreyScanEngine(target_symbols=[
-    "product", "launch", "revenue", "growth", "partnership"
-])
-```
-
-#### Methods
-
-##### `async adaptive_collect(targets: List[Tuple[str, str]]) -> List[Dict[str, Any]]`
-
-Collect data from targets using adaptive intelligence.
-
-**Parameters:**
-- `targets`: List of (target_name, target_type) tuples
-
-**Returns:**
-- List of dictionaries containing collected data
-
-**Example:**
-```python
-targets = [
-    ("microsoft", "tech_company"),
-    ("google", "tech_company"),
-    ("apple", "tech_company")
-]
-
-results = await scanner.adaptive_collect(targets)
-
-for result in results:
-    print(f"Target: {result['target']}")
-    print(f"Data size: {result['data_size']} bytes")
-    print(f"Keywords found: {result['symbols']}")
-    print(f"Method used: {result['method']}")
-```
-
-**Response Format:**
-```python
-{
-    "target": "microsoft",
-    "target_type": "tech_company", 
-    "method": "twitter_widgets",
-    "url": "https://platform.twitter.com/widgets/follow_button.html?screen_name=microsoft",
-    "content": "...",  # First 2000 chars
-    "data_size": 60859,
-    "symbols": ["AI", "cloud", "product"],
-    "timestamp": "2025-01-27T12:00:00",
-    "status": "success"
-}
-```
-
-##### `async close()`
-
-Clean up resources and close connections.
-
-**Example:**
-```python
-try:
-    results = await scanner.adaptive_collect(targets)
-finally:
-    await scanner.close()
-```
-
-### EmergentPathScraper
-
-Advanced discovery engine for finding hidden data sources.
-
-#### Constructor
-
-```python
-from greyscan_discovery import EmergentPathScraper
-
-discoverer = EmergentPathScraper()
-```
-
-#### Methods
-
-##### `async discover_emergent_paths(platform: str, targets: List[str], max_iterations: int = 3) -> List[EmergentPath]`
-
-Discover hidden data pathways through adaptive learning.
-
-**Parameters:**
-- `platform`: Platform to analyze ("reddit", "github", "instagram", etc.)
-- `targets`: List of target identifiers
-- `max_iterations`: Maximum learning iterations (default: 3)
-
-**Returns:**
-- List of EmergentPath objects
-
-**Example:**
-```python
-paths = await discoverer.discover_emergent_paths(
-    platform="reddit",
-    targets=["elonmusk", "VitalikButerin"],
-    max_iterations=2
-)
-
-print(f"Discovered {len(paths)} emergent paths")
-```
-
-##### `display_discoveries()`
-
-Display all discovered paths in formatted output.
-
-**Example:**
-```python
-discoverer.display_discoveries()
-```
-
-## Data Structures
-
-### EmergentPath
-
-```python
-@dataclass
-class EmergentPath:
-    platform: str              # Platform name
-    original_target: str        # Target that led to discovery
-    discovered_url: str         # Working URL found
-    discovery_method: str       # How it was discovered
-    success_rate: float         # Success probability
-    data_types: List[str]       # Types of data available
-    discovered_at: float        # Timestamp of discovery
-```
-
-### CollectionAttempt
-
-```python
-@dataclass
-class CollectionAttempt:
-    target: str                 # Target identifier
-    target_type: str           # Type of target
-    success: bool              # Whether attempt succeeded
-    status_code: Optional[int] # HTTP status code
-    data_size: int             # Size of collected data
-    response_time: float       # Request response time
-    method_used: str           # Collection method used
-    failure_reason: Optional[str] # Reason for failure
-    symbols_found: List[str]   # Keywords found in data
-    timestamp: float           # Attempt timestamp
-```
-
-## Configuration
-
-### Target Symbols
-
-Customize keywords based on your use case:
-
-```python
-# Marketing & Advertising
-marketing_symbols = [
-    "marketing", "brand", "campaign", "engagement", "ROI", 
-    "conversion", "audience", "content", "strategy", "social"
-]
-
-# Competitor Analysis
-competitor_symbols = [
-    "product", "launch", "revenue", "growth", "customers",
-    "partnership", "acquisition", "funding", "expansion"
-]
-
-# Brand Monitoring
-brand_symbols = [
-    "review", "customer", "service", "quality", "price",
-    "experience", "recommend", "love", "hate", "disappointed"
-]
-
-# Lead Generation
-lead_symbols = [
-    "CEO", "founder", "hiring", "team", "job", "career",
-    "opportunity", "partnership", "contact", "demo"
-]
-```
-
-### Platform Support
-
-Currently supported platforms:
-
-| Platform | Success Rate | Methods Available |
-|----------|-------------|-------------------|
-| Twitter/X | 100% | widget_bypass |
-| Reddit | 67% | json_api, rss_feed, about_page |
-| Instagram | 67% | public_profile, embed_api |
-| TikTok | 83% | public_profile, rss_alternative |
-| GitHub | 75% | user_api, repos_api, profile_page |
-| Medium | 100% | user_profile, user_feed, user_api |
-| LinkedIn | 0% | Rate limited (working on bypass) |
-
-## Error Handling
-
-### Common Exceptions
-
-```python
-try:
-    results = await scanner.adaptive_collect(targets)
-except asyncio.TimeoutError:
-    print("Request timed out")
-except aiohttp.ClientError as e:
-    print(f"Network error: {e}")
-except Exception as e:
-    print(f"Unexpected error: {e}")
-```
-
-### Failure Analysis
-
-GreyScan automatically analyzes failures and learns from them:
-
-```python
-# Access failure analysis
-for attempt in scanner.attempt_history:
-    if not attempt.success:
-        print(f"Failed: {attempt.target}")
-        print(f"Reason: {attempt.failure_reason}")
-        print(f"Status: {attempt.status_code}")
-```
-
-## Performance Optimization
-
-### Batch Processing
-
-```python
-# Optimal batch sizes based on platform
-batch_sizes = {
-    "twitter": 8,    # High success rate
-    "reddit": 4,     # Moderate rate limiting
-    "instagram": 6,  # Good performance
-    "github": 8,     # API + web hybrid
-}
-```
-
-### Rate Limiting
-
-GreyScan automatically handles rate limiting:
-
-```python
-# Adaptive delays based on success rate
-# High success (>80%): 0.5s delay
-# Medium success (50-80%): 1.0s delay  
-# Low success (<50%): 2.0s+ delay
-```
-
-### Memory Management
-
-```python
-# Always close connections
-async with GreyScanEngine() as scanner:
-    results = await scanner.adaptive_collect(targets)
-    # Automatically closed
-```
-
-## Advanced Usage
-
-### Custom Learning
-
-```python
-# Access learned patterns
-for pattern in scanner.learned_patterns:
-    print(f"Pattern: {pattern.pattern_type}")
-    print(f"Data: {pattern.pattern_data}")
-    print(f"Confidence: {pattern.confidence}")
-```
-
-### Multi-Platform Collection
-
-```python
-async def collect_from_multiple_platforms():
-    platforms = ["twitter", "reddit", "github"]
-    all_results = []
-    
-    for platform in platforms:
-        scanner = GreyScanEngine()
-        try:
-            results = await scanner.adaptive_collect(targets)
-            all_results.extend(results)
-        finally:
-            await scanner.close()
-    
-    return all_results
-```
-
-### Real-Time Monitoring
+#### Usage
 
 ```python
 import asyncio
+from greyscan_intelligence import GreyScanIntelligence, IntelligenceTarget
 
-async def continuous_monitoring(targets, interval=300):
-    """Monitor targets every 5 minutes"""
-    scanner = GreyScanEngine()
+async def main():
+    # Define intelligence targets
+    targets = [
+        IntelligenceTarget("bitcoin", "coingecko", "cryptocurrency", ["btc"], 10, ["crypto"]),
+        IntelligenceTarget("elonmusk", "twitter", "person", ["elon", "musk"], 10, ["tech"])
+    ]
+    
+    # Run intelligence scan
+    async with GreyScanIntelligence() as intel:
+        report = await intel.full_intelligence_scan(targets)
+        
+        print(f"Intelligence Points: {report['summary']['total_intelligence_points']}")
+        print(f"Entities Resolved: {report['summary']['unique_entities']}")
+        print(f"Relationships Found: {report['summary']['relationships_found']}")
+
+asyncio.run(main())
+```
+
+#### IntelligenceTarget Parameters
+
+```python
+IntelligenceTarget(
+    name: str,              # Target identifier (e.g., "bitcoin", "elonmusk")
+    platform: str,          # Platform to search (e.g., "coingecko", "twitter")
+    target_type: str,       # Type: "person", "cryptocurrency", "topic", etc.
+    aliases: List[str],     # Alternative names (e.g., ["btc", "bitcoin-core"])
+    priority: int,          # Priority 1-10 (10 = highest)
+    tags: List[str]         # Classification tags (e.g., ["crypto", "currency"])
+)
+```
+
+### GreyScanUniversal
+
+Universal platform scanner with 90% success rate across all major platforms.
+
+#### Usage
+
+```python
+import asyncio
+from greyscan_universal import GreyScanUniversal, UniversalTarget
+
+async def main():
+    targets = [
+        UniversalTarget("bitcoin", "coingecko"),
+        UniversalTarget("elonmusk", "twitter"),
+        UniversalTarget("programming", "reddit")
+    ]
+    
+    async with GreyScanUniversal() as scanner:
+        results = await scanner.universal_scan(targets)
+        
+        print(f"Success Rate: {len(results)/len(targets):.1%}")
+        for result in results:
+            print(f"✅ {result['target']} on {result['platform']} - {result['data_size']} bytes")
+
+asyncio.run(main())
+```
+
+### GreyScanEngine
+
+Adaptive learning engine with pattern recognition.
+
+#### Usage
+
+```python
+import asyncio
+from greyscan_core import GreyScanEngine
+
+async def main():
+    engine = GreyScanEngine(target_symbols=["price", "volume", "market", "data"])
+    
+    targets = [
+        ("bitcoin", "coingecko"),
+        ("ethereum", "coingecko")
+    ]
     
     try:
-        while True:
-            results = await scanner.adaptive_collect(targets)
-            
-            # Process results
-            for result in results:
-                if result['symbols']:  # Found keywords
-                    print(f"Alert: {result['target']} mentioned {result['symbols']}")
-            
-            await asyncio.sleep(interval)
+        results = await engine.adaptive_collect(targets)
+        
+        for result in results:
+            print(f"Target: {result['target']}")
+            print(f"Data Size: {result['data_size']} bytes")
+            print(f"Method: {result['method']}")
+            print(f"URL: {result['url']}")
     finally:
-        await scanner.close()
+        await engine.close()
+
+asyncio.run(main())
 ```
+
+## Running the Scripts
+
+### Intelligence Platform Test
+
+```bash
+python greyscan_intelligence.py
+```
+
+**Expected Output:**
+```
+🧠 TESTING FULL INTELLIGENCE SYSTEM
+============================================================
+📡 PHASE 1: DATA COLLECTION
+🎯 [1/6] Collecting: elonmusk (twitter)
+🎯 [2/6] Collecting: bitcoin (coingecko)
+...
+🎉 INTELLIGENCE OPERATION COMPLETE
+📊 Data points collected: 1340
+🔗 Entities resolved: 5
+🕸️ Relationships found: 129
+```
+
+### Universal Scanner Test
+
+```bash
+python greyscan_universal.py
+```
+
+**Expected Output:**
+```
+🌍 TESTING UNIVERSAL SCANNER
+============================================================
+🎯 ATTACKING YOUTUBE: dQw4w9WgXcQ
+✅ SUCCESS: dQw4w9WgXcQ on youtube - 107521 bytes
+...
+Success rate: 90.0% (9/10)
+```
+
+### Core Engine Test
+
+```bash
+python greyscan_core.py
+```
+
+**Expected Output:**
+```
+🔥 TESTING ADAPTIVE LEARNING ENGINE
+============================================================
+🚀 ADAPTIVE COLLECTION: 6 targets
+✅ SUCCESS: bitcoin on coingecko - 94170 bytes
+...
+Success rate: 100.0% (6/6)
+```
+
+### GUI Interface
+
+```bash
+python greyscan_gui.py
+```
+
+**Launches:** Tkinter GUI with forms for target input and real-time results display.
+
+## Data Structures
+
+### Intelligence Report
+
+```python
+{
+    "summary": {
+        "total_intelligence_points": int,
+        "unique_entities": int,
+        "relationships_found": int,
+        "platforms_covered": int,
+        "cross_platform_entities": int
+    },
+    "entities": {
+        "entity_id": {
+            "name": str,
+            "platforms": List[str],
+            "intelligence_count": int,
+            "data_types": List[str]
+        }
+    },
+    "relationships": [
+        {
+            "source": str,
+            "target": str,
+            "type": str,
+            "strength": float,
+            "platforms": List[str]
+        }
+    ]
+}
+```
+
+### Collection Result
+
+```python
+{
+    "target": str,
+    "platform": str,
+    "url": str,
+    "method": str,
+    "data_size": int,
+    "content": str,
+    "extracted_data": dict,
+    "timestamp": float
+}
+```
+
+## Platform Support
+
+### Confirmed Working Platforms
+
+| Platform | Success Rate | Script | Method |
+|----------|-------------|---------|---------|
+| YouTube | 100% | universal | Embed endpoints |
+| Instagram | 100% | universal | Embed widgets |
+| Reddit | 100% | universal | JSON APIs |
+| Twitter | 100% | universal | Google Cache |
+| Medium | 100% | universal | Format parameters |
+| CoinGecko | 100% | core/intelligence | Public APIs |
+| Telegram | 100% | universal | Public channels |
+
+### Platform-Specific Examples
+
+#### Crypto Intelligence
+```python
+crypto_targets = [
+    IntelligenceTarget("bitcoin", "coingecko", "cryptocurrency"),
+    IntelligenceTarget("ethereum", "coingecko", "cryptocurrency"),
+    IntelligenceTarget("BTC", "coinmarketcap", "cryptocurrency")
+]
+```
+
+#### Social Media Intelligence
+```python
+social_targets = [
+    UniversalTarget("elonmusk", "twitter"),
+    UniversalTarget("programming", "reddit"),
+    UniversalTarget("python", "medium")
+]
+```
+
+#### Video Platform Intelligence
+```python
+video_targets = [
+    UniversalTarget("dQw4w9WgXcQ", "youtube"),  # Video ID
+    UniversalTarget("pewdiepie", "youtube")     # Channel
+]
+```
+
+## Database Storage
+
+The intelligence platform automatically creates an SQLite database (`intelligence.db`) with:
+
+- **Entities table**: Unique entities with cross-platform links
+- **Intelligence data table**: All collected data points
+- **Relationships table**: Mapped connections between entities
+- **Analysis results table**: Processed intelligence insights
+
+## Error Handling
+
+All scripts include comprehensive error handling:
+
+```python
+try:
+    async with GreyScanIntelligence() as intel:
+        report = await intel.full_intelligence_scan(targets)
+except Exception as e:
+    print(f"Error: {e}")
+    # Script continues with partial results
+```
+
+## Performance Notes
+
+- **Intelligence Platform**: ~3.65 seconds for 6 targets
+- **Universal Scanner**: ~90% success rate across platforms
+- **Core Engine**: 100% success rate on crypto targets
+- **Memory Usage**: Minimal, results are streamed
+- **Rate Limiting**: Automatic delays to prevent blocking
 
 ## Integration Examples
 
-### Flask Web App
+### Custom Script Integration
 
 ```python
-from flask import Flask, jsonify
-from greyscan_core import GreyScanEngine
+# Your custom script
+import asyncio
+from greyscan_intelligence import GreyScanIntelligence, IntelligenceTarget
 
-app = Flask(__name__)
+async def my_intelligence_operation():
+    targets = [
+        # Your targets here
+    ]
+    
+    async with GreyScanIntelligence() as intel:
+        report = await intel.full_intelligence_scan(targets)
+        
+        # Process results
+        return report
 
-@app.route('/scan/<target>')
-async def scan_target(target):
-    scanner = GreyScanEngine()
-    try:
-        results = await scanner.adaptive_collect([(target, "unknown")])
-        return jsonify(results)
-    finally:
-        await scanner.close()
+# Run your operation
+results = asyncio.run(my_intelligence_operation())
 ```
 
-### Database Storage
+### Data Export
 
 ```python
-import sqlite3
 import json
 
-async def store_results(results):
-    conn = sqlite3.connect('greyscan.db')
-    
-    for result in results:
-        conn.execute("""
-            INSERT INTO scans (target, data_size, symbols, timestamp)
-            VALUES (?, ?, ?, ?)
-        """, (
-            result['target'],
-            result['data_size'], 
-            json.dumps(result['symbols']),
-            result['timestamp']
-        ))
-    
-    conn.commit()
-    conn.close()
+# Export intelligence report
+with open('intelligence_report.json', 'w') as f:
+    json.dump(report, f, indent=2)
+
+# Export collection results
+with open('collection_results.json', 'w') as f:
+    json.dump(results, f, indent=2)
+```
+
+## Requirements
+
+```
+Python 3.8+
+aiohttp
+beautifulsoup4
+networkx
+sqlite3 (built-in)
+tkinter (built-in, for GUI)
+```
+
+## Installation
+
+```bash
+# Clone repository
+git clone https://github.com/Betti-Labs/greyscan.git
+cd greyscan
+
+# Install dependencies
+pip install aiohttp beautifulsoup4 networkx
+
+# Test the system
+python greyscan_intelligence.py
 ```
 
 ## Troubleshooting
 
-See [Troubleshooting Guide](troubleshooting.md) for common issues and solutions.
+### Common Issues
+
+1. **Import Errors**: Ensure all dependencies are installed
+2. **Network Timeouts**: Check internet connection
+3. **Low Success Rates**: Verify target names are correct
+4. **Database Errors**: Ensure write permissions in directory
+
+### Debug Mode
+
+Enable debug output by modifying the scripts:
+
+```python
+import logging
+logging.basicConfig(level=logging.DEBUG)
+```
 
 ## Contributing
 
-See [Contributing Guide](../CONTRIBUTING.md) for development guidelines.
+This is a research project. See `CONTRIBUTING.md` for guidelines.

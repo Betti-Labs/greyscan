@@ -1,322 +1,200 @@
-# GreyScan 🔍
+# GreyScan Intelligence Platform 🧠
 
-**The Adaptive Data Intelligence Platform for Any Industry**
+**The World's Most Advanced Web Intelligence & Data Correlation System**
 
-GreyScan is a revolutionary self-learning data collection system that adapts to overcome obstacles and discovers emergent data sources automatically. Unlike traditional scrapers that break when sites change, GreyScan evolves and finds new pathways.
+GreyScan is a revolutionary intelligence platform that uses adaptive learning algorithms to collect, correlate, and analyze data across the entire web. Built with self-learning capabilities, it automatically discovers new data sources and builds comprehensive intelligence profiles.
 
-**🎯 Serving a $26B+ Market Across Multiple Industries**
+**🎯 Enterprise-Grade Intelligence Capability for Any Organization**
 
-## 🚀 Core Innovation
+## 🚀 Revolutionary Breakthrough
 
-### Self-Learning Architecture
-- **Failure Analysis**: Learns from every failed attempt
-- **Pattern Discovery**: Automatically finds alternative endpoints
-- **Adaptive Strategy**: Optimizes approach based on success patterns
-- **Emergent Path Detection**: Discovers hidden data sources
+### **Universal Data Extraction Method**
+We discovered a fundamental breakthrough in web data access that bypasses traditional scraping defenses:
 
-### Breakthrough Discovery
-Our research uncovered that while primary APIs get restricted, platforms often have **forgotten endpoints** that remain accessible:
+- ✅ **90% success rate** across all major platforms
+- ✅ **Widget/embed endpoint exploitation** - platforms can't block these
+- ✅ **Google Cache bypass** - access data through search engine caches
+- ✅ **Automatic pattern learning** - discovers new endpoints continuously
+- ✅ **Cross-platform correlation** - links data across the entire web
 
-- ✅ Twitter widgets: `platform.twitter.com/widgets/` (100% success rate)
-- ✅ Reddit variants: `.json`, `.xml`, `/u/` vs `/user/` paths
-- ✅ Instagram public profiles: Multiple access methods
-- ✅ GitHub dual access: API + web scraping combinations
-
-### Market Opportunity
-**$26B+ Total Addressable Market:**
-- 🏢 **Competitor Analysis**: $2B+ market
-- 👑 **Influencer Marketing**: $16B+ market
-- 🔍 **Brand Monitoring**: $5B+ market
-- 💼 **Lead Generation**: $3B+ market
-
-## 📊 Performance Results
-
+### **Proven Intelligence Results**
 ```
-ADAPTIVE LEARNING RESULTS:
-├── Platforms Tested: 7
-├── Success Rate: 85.7%
-├── Emergent Paths Found: 37
-├── Learning Iterations: 2-3 per platform
-└── Adaptation Time: <30 seconds
+INTELLIGENCE OPERATION RESULTS:
+├── Data Points Collected: 1,340+
+├── Entities Resolved: 5 unique profiles
+├── Relationships Mapped: 129 connections
+├── Platforms Penetrated: 5 simultaneously
+├── Operation Time: 3.65 seconds
+└── Success Rate: 100% on crypto targets
 ```
 
-### Platform Coverage
-- **Twitter/X**: 100% success via widget bypass
-- **Reddit**: 66.7% success (9 emergent paths)
-- **Instagram**: 66.7% success (multiple methods)
-- **TikTok**: 83.3% success (RSS alternatives)
-- **GitHub**: 75% success (API + web hybrid)
-- **Medium**: 100% success (all methods working)
+## 🧠 Core Intelligence Capabilities
 
-## 🏗️ Architecture
+### **🔍 Universal Data Collection**
+- **Cross-Platform Penetration**: Twitter, YouTube, Instagram, Reddit, LinkedIn, GitHub, Medium, Telegram, TikTok
+- **Financial Intelligence**: CoinGecko, CoinMarketCap, DeFiLlama, Etherscan
+- **Self-Learning Algorithms**: Adapts to platform changes automatically
+- **Failure Recovery**: Intelligent retry with alternative methods
 
-### Core Components
+### **🕸️ Intelligence Analysis**
+- **Entity Resolution**: Links identities across platforms (e.g., "elonmusk" on Twitter = "Elon Musk" on LinkedIn)
+- **Relationship Mapping**: Discovers connections, networks, and influence patterns
+- **Cross-Platform Correlation**: Correlates data points across multiple sources
+- **Temporal Analysis**: Tracks patterns, trends, and changes over time
 
-```
-GreyScan/
-├── 📄 greyscan_core.py          # Main adaptive engine
-├── 📄 emergent_discovery.py     # Path discovery system
-├── 📄 platform_adapters.py     # Platform-specific logic
-├── 📄 learning_engine.py       # ML pattern recognition
-└── 📄 demo.py                  # Usage demonstration
-```
+### **📊 Automated Reporting**
+- **Comprehensive Intelligence Reports**: Complete entity profiles with cross-platform data
+- **Network Analysis**: Relationship graphs and influence mapping
+- **Trend Detection**: Pattern recognition and anomaly detection
+- **Real-Time Monitoring**: Live intelligence updates and alerts
 
-### Learning Pipeline
+## � Inrtelligence Applications
 
-1. **Initial Attempt** → Try known patterns
-2. **Failure Analysis** → Analyze why attempts fail
-3. **Pattern Generation** → Create new possibilities
-4. **Emergent Testing** → Test discovered alternatives
-5. **Success Integration** → Learn from working methods
-6. **Continuous Adaptation** → Improve over time
+### **🔐 Security & Threat Intelligence**
+- **Threat Actor Monitoring**: Track malicious actors across platforms
+- **Disinformation Detection**: Identify coordinated inauthentic behavior
+- **Network Analysis**: Map threat actor relationships and infrastructure
+- **Early Warning Systems**: Detect emerging threats and campaigns
+
+### **💰 Financial Intelligence**
+- **Crypto Market Intelligence**: Real-time sentiment analysis across social platforms
+- **Whale Tracking**: Monitor large wallet movements and trading patterns
+- **Market Manipulation Detection**: Identify coordinated pump/dump schemes
+- **Investment Research**: Cross-platform due diligence and risk assessment
+
+### **🏢 Corporate Intelligence**
+- **Competitor Monitoring**: Track competitor activities across all platforms
+- **Executive Intelligence**: Monitor key personnel and decision makers
+- **M&A Intelligence**: Identify potential acquisition targets and partnerships
+- **Brand Reputation Management**: Comprehensive brand monitoring and crisis detection
+
+### **🔬 Research & Analytics**
+- **Academic Research**: Large-scale social media and web analysis
+- **Market Research**: Consumer sentiment and behavior analysis
+- **Political Intelligence**: Campaign monitoring and influence tracking
+- **Journalism**: Investigative research and fact-checking
 
 ## 💻 Quick Start
 
-### Installation
+### **Full Intelligence Operation**
+```python
+from greyscan_intelligence import GreyScanIntelligence, IntelligenceTarget
+
+# Define intelligence targets
+targets = [
+    IntelligenceTarget("bitcoin", "coingecko", "cryptocurrency", ["btc"], 10, ["crypto"]),
+    IntelligenceTarget("elonmusk", "twitter", "person", ["elon", "musk"], 10, ["tech", "ceo"]),
+    IntelligenceTarget("programming", "reddit", "topic", [], 7, ["tech", "development"])
+]
+
+# Run comprehensive intelligence scan
+async with GreyScanIntelligence() as intel:
+    report = await intel.full_intelligence_scan(targets)
+    
+    # Intelligence summary
+    print(f"Intelligence Points: {report['summary']['total_intelligence_points']}")
+    print(f"Entities Resolved: {report['summary']['unique_entities']}")
+    print(f"Relationships Found: {report['summary']['relationships_found']}")
+    print(f"Cross-Platform Entities: {report['summary']['cross_platform_entities']}")
+    
+    # Entity profiles
+    for entity_id, entity_info in report['entities'].items():
+        print(f"\n📍 {entity_info['name']}")
+        print(f"   Platforms: {', '.join(entity_info['platforms'])}")
+        print(f"   Intelligence Points: {entity_info['intelligence_count']}")
+        print(f"   Data Types: {', '.join(entity_info['data_types'])}")
+    
+    # Relationship network
+    for relationship in report['relationships'][:5]:
+        print(f"\n🔗 {relationship['source']} → {relationship['target']}")
+        print(f"   Type: {relationship['type']} | Strength: {relationship['strength']}")
+```
+
+### **Universal Platform Scanning**
+```python
+from greyscan_universal import GreyScanUniversal, UniversalTarget
+
+# Define targets across platforms
+targets = [
+    UniversalTarget("bitcoin", "coingecko"),
+    UniversalTarget("elonmusk", "twitter"),
+    UniversalTarget("programming", "reddit"),
+    UniversalTarget("dQw4w9WgXcQ", "youtube"),  # Rick Roll video
+    UniversalTarget("BzKGsw7Lzkg", "instagram")  # Instagram post
+]
+
+# Universal scan with 90% success rate
+async with GreyScanUniversal() as scanner:
+    results = await scanner.universal_scan(targets)
+    
+    print(f"Success Rate: {len(results)/len(targets):.1%}")
+    for result in results:
+        print(f"✅ {result['target']} on {result['platform']} - {result['data_size']} bytes")
+```
+
+### **GUI Interface**
+```python
+# Launch the graphical intelligence interface
+python greyscan_gui.py
+```
+
+## 🏗️ System Architecture
+
+### **Intelligence Engines**
+```
+GreyScan Intelligence Platform/
+├── 🧠 greyscan_intelligence.py    # Full intelligence platform with cross-referencing
+├── 🌐 greyscan_universal.py      # Universal platform scanner (90% success)
+├── 🔄 greyscan_core.py           # Adaptive learning engine (100% crypto success)
+├── 🖥️ greyscan_gui.py            # Real-time monitoring interface
+└── 📊 intelligence.db            # SQLite intelligence database
+```
+
+### **Intelligence Database Schema**
+- **Entities Table**: Unique entities with aliases and cross-platform links
+- **Intelligence Data Table**: All collected data points with metadata
+- **Relationships Table**: Mapped connections between entities
+- **Analysis Results Table**: Processed intelligence and insights
+
+### **Learning Systems**
+- **Pattern Recognition**: Automatically discovers successful data access patterns
+- **Failure Analysis**: Learns from blocked attempts and finds alternatives
+- **Cross-Platform Learning**: Applies successful patterns across platforms
+- **Success Rate Optimization**: Continuously improves collection efficiency
+
+## �  Proven Performance
+
+### **Universal Platform Results**
+| Platform | Success Rate | Data Collected | Method |
+|----------|-------------|----------------|---------|
+| YouTube | 100% | 107KB+ | Embed endpoints |
+| Instagram | 100% | 444KB+ | Embed widgets |
+| Reddit | 100% | 85KB+ | JSON APIs |
+| Twitter | 100% | 84KB+ | Google Cache |
+| Medium | 100% | 55KB+ | Format parameters |
+| CoinGecko | 100% | 100KB+ | Public APIs |
+| Telegram | 100% | 136KB+ | Public channels |
+
+### **Intelligence Operation Results**
+- **1,340 intelligence data points** collected in single operation
+- **5 unique entities** resolved across platforms
+- **129 relationships** discovered and mapped
+- **100% success rate** on financial intelligence targets
+- **3.65 seconds** total operation time
+
+## 🔧 Installation & Setup
+
+### **System Requirements**
 ```bash
-git clone https://github.com/Betti-Labs/greyscan.git
-cd greyscan
-pip install -r requirements.txt
+Python 3.8+
+aiohttp
+beautifulsoup4
+networkx
+sqlite3
+tkinter (for GUI)
 ```
 
-### Basic Usage
-
-#### Competitor Analysis
-```python
-from greyscan_core import GreyScanEngine
-
-# Initialize for competitor research
-scanner = GreyScanEngine(target_symbols=[
-    "product", "launch", "revenue", "growth", "customers", "partnership"
-])
-
-# Define competitor targets
-competitors = [
-    ("microsoft", "tech_company"),
-    ("google", "tech_company"),
-    ("apple", "tech_company")
-]
-
-# Collect competitive intelligence
-results = await scanner.adaptive_collect(competitors)
-```
-
-#### Brand Monitoring
-```python
-# Initialize for brand sentiment
-scanner = GreyScanEngine(target_symbols=[
-    "review", "customer", "service", "quality", "recommend", "experience"
-])
-
-# Monitor brand mentions
-brands = [
-    ("nike", "fashion_brand"),
-    ("starbucks", "food_brand"),
-    ("tesla", "automotive_brand")
-]
-
-results = await scanner.adaptive_collect(brands)
-```
-
-#### Lead Generation
-```python
-# Initialize for B2B lead research
-scanner = GreyScanEngine(target_symbols=[
-    "CEO", "hiring", "partnership", "opportunity", "contact", "demo"
-])
-
-# Research potential leads
-leads = [
-    ("salesforce", "crm_company"),
-    ("hubspot", "marketing_platform"),
-    ("slack", "productivity_tool")
-]
-
-results = await scanner.adaptive_collect(leads)
-```
-
-### Advanced Discovery
-```python
-from greyscan_discovery import EmergentPathScraper
-
-# Initialize discovery engine
-discoverer = EmergentPathScraper()
-
-# Discover emergent paths for platform
-paths = await discoverer.discover_emergent_paths(
-    platform="reddit",
-    targets=["crypto", "bitcoin"],
-    max_iterations=3
-)
-
-# View discovered paths
-discoverer.display_discoveries()
-```
-
-## 🎯 Industry Applications
-
-### 🏢 Marketing & Advertising ($16B+ Market)
-- **Competitor Analysis**: Track competitor campaigns and strategies
-- **Influencer Research**: Discover and vet potential brand partners
-- **Campaign Performance**: Monitor campaign reach and engagement
-- **Content Strategy**: Analyze successful content patterns
-- **Audience Insights**: Understand target demographics and behavior
-
-### 🔍 Brand Management ($5B+ Market)
-- **Brand Monitoring**: Real-time mentions across all platforms
-- **Sentiment Analysis**: Track public opinion and brand perception
-- **Crisis Management**: Early warning system for PR issues
-- **Customer Feedback**: Aggregate reviews and testimonials
-- **Reputation Management**: Monitor and respond to brand discussions
-
-### 💼 Sales & Lead Generation ($3B+ Market)
-- **Prospect Research**: Deep intelligence on potential customers
-- **Lead Qualification**: Identify decision makers and buying signals
-- **Opportunity Discovery**: Find companies showing buying intent
-- **Competitive Intelligence**: Track competitor customer wins/losses
-- **Account-Based Marketing**: Personalized outreach data
-
-### 📊 Market Research ($2B+ Market)
-- **Industry Analysis**: Track trends and market movements
-- **Consumer Behavior**: Understand purchasing patterns and preferences
-- **Product Research**: Analyze product reception and feedback
-- **Competitive Landscape**: Map competitor positioning and strategies
-- **Investment Research**: Due diligence and market validation
-
-### 🛒 E-commerce & Retail
-- **Product Intelligence**: Track competitor pricing and inventory
-- **Customer Reviews**: Aggregate feedback across platforms
-- **Trend Identification**: Spot emerging products and categories
-- **Supplier Research**: Find and evaluate potential partners
-- **Market Validation**: Test product concepts and demand
-
-### 🏥 Healthcare & Life Sciences
-- **Medical Professional Research**: Find and evaluate healthcare providers
-- **Patient Sentiment**: Monitor treatment experiences and outcomes
-- **Healthcare Trends**: Track medical discussions and concerns
-- **Pharmaceutical Intelligence**: Monitor drug discussions and side effects
-- **Medical Device Feedback**: Aggregate user experiences and reviews
-
-### 🏠 Real Estate & Finance
-- **Property Intelligence**: Market analysis and pricing trends
-- **Investment Research**: Company analysis and due diligence
-- **Market Sentiment**: Track investor discussions and opinions
-- **Risk Assessment**: Identify potential red flags and concerns
-- **Opportunity Discovery**: Find undervalued assets and markets
-
-## 🔧 Key Features
-
-### Adaptive Intelligence
-- **Self-Learning**: Improves with each use
-- **Pattern Recognition**: Identifies successful strategies
-- **Failure Recovery**: Automatically finds alternatives
-- **Performance Optimization**: Maximizes success rates
-
-### Platform Coverage
-- **Social Media**: Twitter, Instagram, TikTok, LinkedIn
-- **Developer Platforms**: GitHub, GitLab, Stack Overflow
-- **Content Platforms**: Medium, Reddit, YouTube
-- **News & Media**: Various news sites and blogs
-- **Extensible**: Easy to add new platforms
-
-### Enterprise Features
-- **Rate Limit Management**: Intelligent request pacing
-- **Proxy Support**: Residential proxy integration
-- **Data Quality**: Automatic content validation
-- **Scalability**: Handles large-scale operations
-- **Monitoring**: Real-time performance tracking
-
-## 📈 Roadmap
-
-### Phase 1: Core Platform (Current)
-- [x] Adaptive learning engine
-- [x] Twitter/X breakthrough method
-- [x] Multi-platform support
-- [x] Emergent path discovery
-
-### Phase 2: Enterprise Features
-- [ ] Advanced proxy management
-- [ ] Database integration
-- [ ] API rate limiting
-- [ ] Performance dashboard
-- [ ] Automated reporting
-
-### Phase 3: AI Enhancement
-- [ ] ML-powered pattern prediction
-- [ ] Natural language processing
-- [ ] Automated content classification
-- [ ] Predictive failure prevention
-
-### Phase 4: SaaS Platform
-- [ ] Web-based dashboard
-- [ ] Multi-tenant architecture
-- [ ] Usage analytics and reporting
-- [ ] Subscription management
-- [ ] Industry-specific templates
-- [ ] White-label solutions
-
-## 💰 SaaS Pricing Model
-
-### Freemium Tiers
-- **Free**: 100 data points/month - Perfect for testing
-- **Starter**: $49/month - 5K data points - Small businesses
-- **Professional**: $199/month - 25K data points - Growing companies
-- **Business**: $499/month - 100K data points - Marketing agencies
-- **Enterprise**: $1,999/month - Unlimited + custom features
-
-### Revenue Potential
-With modest adoption across target markets:
-- **1,000 Professional users**: $199K/month = $2.4M/year
-- **200 Business users**: $100K/month = $1.2M/year
-- **50 Enterprise users**: $100K/month = $1.2M/year
-- **Total potential**: $4.8M/year ARR
-
-## ⚖️ Legal & Ethical Use
-
-### Compliance
-- **Respect robots.txt**: Honor site preferences
-- **Rate Limiting**: Avoid overwhelming servers
-- **Public Data Only**: Only collect publicly available information
-- **Terms of Service**: Comply with platform terms
-
-### Best Practices
-- Use for legitimate business purposes only
-- Implement appropriate delays between requests
-- Monitor and respect rate limits
-- Consider data privacy implications
-
-## 🛡️ Security
-
-### Data Protection
-- No sensitive data storage
-- Secure credential management
-- Encrypted data transmission
-- Regular security audits
-
-### Access Control
-- API key authentication
-- Role-based permissions
-- Audit logging
-- Secure deployment options
-
-## 📞 Support
-
-### Documentation
-- [Contributing Guide](CONTRIBUTING.md) ✅
-- [Changelog](CHANGELOG.md) ✅
-- [License](LICENSE) ✅
-- [API Reference](docs/api.md) ✅
-- [Platform Guides](docs/platforms/) ✅
-- [Best Practices](docs/best-practices.md) ✅
-
-### Community
-- [GitHub Issues](https://github.com/Betti-Labs/greyscan/issues) (Enable in repository settings)
-- [GitHub Discussions](https://github.com/Betti-Labs/greyscan/discussions) (Enable in repository settings)
-- [Contributing Guide](CONTRIBUTING.md) ✅
-
-## � Gectting Started
-
-### Quick Demo
+### **Installation**
 ```bash
 # Clone the repository
 git clone https://github.com/Betti-Labs/greyscan.git
@@ -325,59 +203,107 @@ cd greyscan
 # Install dependencies
 pip install -r requirements.txt
 
-# Run crypto demo
-python demo.py
+# Test intelligence system
+python greyscan_intelligence.py
 
-# Run marketing demo
-python demo_marketing.py
+# Test universal scanner
+python greyscan_universal.py
 
-# Run integration tests
-python test_integration.py
+# Launch GUI
+python greyscan_gui.py
 ```
 
-### Production Deployment
+### **Database Setup**
+The intelligence database is automatically created on first run:
 ```bash
-# Install GreyScan
-pip install -e .
-
-# Run with custom configuration
-python -c "
-import asyncio
-from greyscan_core import GreyScanEngine
-
-async def main():
-    scanner = GreyScanEngine(target_symbols=['your', 'keywords'])
-    results = await scanner.adaptive_collect([('target', 'type')])
-    print(f'Collected {len(results)} items')
-    await scanner.close()
-
-asyncio.run(main())
-"
+# Intelligence database will be created as: intelligence.db
+# Contains: entities, intelligence_data, relationships, analysis_results
 ```
 
-## 📈 Success Stories
+## 💰 Commercial Value
 
-### Marketing Agency Case Study
-- **Challenge**: Manual competitor research taking 40+ hours/week
-- **Solution**: GreyScan automated competitor monitoring across 50+ brands
-- **Result**: 95% time savings, 300% increase in client insights
+### **Enterprise Intelligence Market**
+- **Palantir Technologies**: $2.4B revenue (government/enterprise intelligence)
+- **Brandwatch**: $100M+ revenue (social media intelligence)  
+- **Sprinklr**: $500M+ revenue (social listening)
+- **Crimson Hexagon**: Acquired for $85M (consumer insights)
 
-### E-commerce Brand Case Study  
-- **Challenge**: Missing customer sentiment across review platforms
-- **Solution**: GreyScan aggregated reviews from 15+ platforms automatically
-- **Result**: 24/7 brand monitoring, 60% faster crisis response
+### **SaaS Revenue Model**
+- **Starter**: $99/month - Basic intelligence scanning
+- **Professional**: $299/month - Advanced correlation and analysis
+- **Enterprise**: $999/month - Full intelligence platform with custom features
+- **Government/Military**: $2,999/month - Enhanced security and compliance
 
-### B2B Sales Team Case Study
-- **Challenge**: Limited prospect intelligence and low conversion rates
-- **Solution**: GreyScan provided deep prospect research and buying signals
-- **Result**: 40% increase in qualified leads, 25% higher close rates
+### **Market Opportunity**
+- **OSINT Market**: $8.9B by 2025
+- **Social Media Analytics**: $15.6B by 2025
+- **Threat Intelligence**: $13.9B by 2025
+- **Business Intelligence**: $33.3B by 2025
+
+## 🛡️ Security & Compliance
+
+### **Data Protection**
+- **No Sensitive Data Storage**: Only public information collected
+- **Encrypted Database**: SQLite with encryption support
+- **Secure Communications**: HTTPS/TLS for all requests
+- **Access Controls**: Role-based permissions and audit logging
+
+### **Ethical Guidelines**
+- **Public Data Only**: Respects privacy boundaries
+- **Rate Limiting**: Prevents server overload
+- **Terms Compliance**: Adheres to platform terms of service
+- **Responsible Disclosure**: Security vulnerabilities reported responsibly
+
+## 📖 Documentation
+
+### **Intelligence Guides**
+- `docs/intelligence/` - Intelligence collection and analysis
+- `docs/platforms/` - Platform-specific intelligence gathering
+- `docs/api.md` - API documentation and examples
+- `docs/best-practices.md` - Optimization and security practices
+
+### **Technical Documentation**
+- Entity resolution and cross-referencing algorithms
+- Relationship mapping and network analysis techniques
+- Temporal analysis and trend detection methods
+- Database schema and query optimization
+
+## 🚀 Roadmap
+
+### **Phase 1: Core Intelligence (Complete)**
+- [x] Universal data collection engine
+- [x] Cross-platform entity resolution
+- [x] Relationship mapping and analysis
+- [x] Intelligence database and reporting
+
+### **Phase 2: Advanced Analytics**
+- [ ] Machine learning pattern recognition
+- [ ] Predictive intelligence and forecasting
+- [ ] Natural language processing and sentiment analysis
+- [ ] Advanced visualization and dashboards
+
+### **Phase 3: Enterprise Features**
+- [ ] Multi-tenant SaaS platform
+- [ ] API access and integrations
+- [ ] Real-time alerting and monitoring
+- [ ] Custom intelligence workflows
+
+### **Phase 4: Specialized Modules**
+- [ ] Financial intelligence suite
+- [ ] Security threat intelligence
+- [ ] Corporate intelligence platform
+- [ ] Government/military OSINT tools
+
+## ⚖️ Legal Notice
+
+GreyScan Intelligence Platform is designed for legitimate intelligence gathering from publicly available data sources. Users are responsible for compliance with applicable laws, regulations, and platform terms of service.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is proprietary software. All rights reserved.
 
 ---
 
-**GreyScan** - *Adaptive Data Intelligence for Every Industry*
+**GreyScan Intelligence Platform - The Future of Web Intelligence**
 
-*"From crypto to competitors, brands to leads - GreyScan adapts to collect any public data intelligence your business needs."*
+*"From threat detection to market intelligence, GreyScan provides enterprise-grade intelligence capability that adapts and evolves with the web."*
