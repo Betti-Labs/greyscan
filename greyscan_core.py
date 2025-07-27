@@ -558,7 +558,7 @@ async def demo_adaptive_scraper():
         ("cz_binance", "exchange")
     ]
     
-    scraper = AdaptiveDataScraper()
+    scraper = GreyScanEngine()
     
     try:
         # Run adaptive collection
