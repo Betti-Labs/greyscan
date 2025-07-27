@@ -1,0 +1,29 @@
+# GreyScan Core Dependencies
+aiohttp>=3.8.0
+asyncio-throttle>=1.0.2
+fake-useragent>=1.4.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+requests>=2.28.0
+urllib3>=1.26.0
+
+# Data Processing
+pandas>=1.5.0
+numpy>=1.24.0
+python-dateutil>=2.8.0
+
+# Optional: Enhanced Features
+# Uncomment if using advanced proxy features
+# requests[socks]>=2.28.0
+# pysocks>=1.7.0
+
+# Optional: Database Support
+# Uncomment if using database storage
+# sqlalchemy>=1.4.0
+# psycopg2-binary>=2.9.0
+
+# Development Dependencies (for contributors)
+# pytest>=7.0.0
+# pytest-asyncio>=0.21.0
+# black>=22.0.0
+# flake8>=5.0.0
