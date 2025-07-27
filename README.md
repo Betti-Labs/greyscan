@@ -2,7 +2,8 @@
 
 **Adaptive Web Intelligence Collection and Analysis System**
 
-GreyScan is a modular intelligence platform that combines multiple specialized engines for comprehensive web data collection, entity resolution, and cross-platform analysis. The system employs adaptive learning algorithms to discover and exploit data access patterns across web platforms.
+ GreyScan is a modular Python-based platform for real-time collection, analysis, and correlation of publicly available data across major web platforms. It operates without relying on APIs or authentication, and is optimized for research, intelligence, and data analysis use cases.
+
 
 ## System Architecture
 
