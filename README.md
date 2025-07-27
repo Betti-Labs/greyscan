@@ -302,15 +302,17 @@ With modest adoption across target markets:
 ## 📞 Support
 
 ### Documentation
-- [API Reference](docs/api.md)
-- [Platform Guides](docs/platforms/)
-- [Best Practices](docs/best-practices.md)
-- [Troubleshooting](docs/troubleshooting.md)
+- [Contributing Guide](CONTRIBUTING.md) ✅
+- [Changelog](CHANGELOG.md) ✅
+- [License](LICENSE) ✅
+- [API Reference](docs/api.md) ✅
+- [Platform Guides](docs/platforms/) ✅
+- [Best Practices](docs/best-practices.md) ✅
 
 ### Community
-- [GitHub Issues](https://github.com/Betti-Labs/greyscan/issues)
-- [Discussions](https://github.com/Betti-Labs/greyscan/discussions)
-- [Contributing Guide](CONTRIBUTING.md)
+- [GitHub Issues](https://github.com/Betti-Labs/greyscan/issues) (Enable in repository settings)
+- [GitHub Discussions](https://github.com/Betti-Labs/greyscan/discussions) (Enable in repository settings)
+- [Contributing Guide](CONTRIBUTING.md) ✅
 
 ## � Gectting Started
 
